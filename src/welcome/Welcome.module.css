@@ -1,0 +1,54 @@
+#welcome {
+  display: flex;
+  position: relative;
+  z-index: 5;
+}
+
+#cringyPic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
+#picContainer {
+  margin-left: 5vw;
+  position: relative;
+  width: 25%;
+}
+#picContainer::after {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 6;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+}
+
+#welcomeText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5vw;
+  width: 60%;
+  margin-left: -0.5vw;
+  margin-top: 7vw;
+  z-index: 7;
+}
+#bobur {
+  color: var(--gold);
+}
+@media (max-width: 900px) {
+  #picContainer {
+    width: 60%;
+    margin-left: 0;
+  }
+  #picContainer::after {
+    display: none;
+  }
+  #welcomeText {
+    margin-top: 30vw;
+    margin-left: -15vw;
+  }
+}

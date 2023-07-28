@@ -1,0 +1,44 @@
+#about {
+  width: 100%;
+  background-color: #0d0d18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0;
+  gap: 10vw;
+  position: relative;
+  z-index: 1;
+}
+#aboutMe {
+  font-size: max(min(6vw, 6vh), 20px);
+}
+
+#smiling {
+  border-radius: 10px;
+  width: 30vw;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 7px black;
+  transform: rotateY(180deg);
+}
+#aboutContent {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+#aboutText {
+  font-size: max(min(3vw, 3vh), 16px);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 900px) {
+  #about {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #smiling {
+    width: 80vw;
+  }
+  #aboutContent {
+    width: 80vw;
+  }
+}

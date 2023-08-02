@@ -5,10 +5,16 @@ import Start from "./start/Start";
 import Skills from "./skills/Skills";
 import Welcome from "./welcome/Welcome";
 import Contacts from "./contacts/Contacts";
+import { useEffect } from "react";
+import { id } from "./main";
 export default () => {
   document.documentElement.className = "forward";
+  useEffect(() => {
+    document.documentElement.style.backgroundImage = "";
+    id("portfolio").style.opacity = 1;
+  }, []);
   return (
-    <>
+    <div id="portfolio">
       <Header />
       <Welcome />
       <About />
@@ -20,6 +26,6 @@ export default () => {
         <div id="passion">© Bobur Khayitov 2023 | Made with passion 😎 </div>
         <div id="lastUpdate">last update: 3 Aug, 2023</div>
       </div>
-    </>
+    </div>
   );
 };

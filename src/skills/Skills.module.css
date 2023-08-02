@@ -1,0 +1,232 @@
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  width: 100%;
+}
+#header {
+  margin-bottom: 10vh;
+  font-size: max(min(10vw, 7vh), 16px);
+  text-shadow: 0px 1px 2px white;
+}
+#staticPlanetarium {
+  position: relative;
+  width: auto;
+  height: 70vh;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20vh;
+}
+#planetarium {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 100vw;
+  --orbitTime: 50s;
+  animation: orbit infinite var(--orbitTime) linear;
+}
+#core {
+  height: min(35vh, 45vw);
+  width: min(38vh, 45vw);
+  border-radius: max(100vh, 100vw);
+  border: 1px solid rgb(51, 51, 51);
+  background-color: #000a23;
+  position: relative;
+  animation: orbit infinite reverse var(--orbitTime) linear,
+    glow infinite 0.2s ease-in-out;
+}
+#core > * {
+  position: absolute;
+  height: 20%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+#chatgptDiv {
+  left: 22%;
+  top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: max(100vw, 100vh);
+}
+#chatgpt {
+  height: 90%;
+  border-radius: max(100vw, 100vh);
+  filter: invert();
+}
+#stackoverflow {
+  right: 30%;
+  top: 5%;
+}
+#sololearn {
+  top: 50%;
+  left: 50%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 5%;
+  border-radius: min(5vw, 5vh);
+}
+#w3schools {
+  top: 50%;
+  right: 12%;
+  transform: translateY(-50%);
+}
+#tum {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  aspect-ratio: 1.4;
+}
+#cssTricks {
+  bottom: 10%;
+  right: 25%;
+  background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+  --g: radial-gradient(farthest-side, #000 97%, #0000 101%) no-repeat;
+  -webkit-mask: var(--g) 17% 69% /15% 15%, var(--g) 83% 69% /15% 15%,
+    var(--g) 17% 30.5%/15% 15%, var(--g) 84% 30.5%/15% 15%,
+    var(--g) 50.5% 87% /15% 15%, var(--g) 50% 13% /15% 15%,
+    radial-gradient(#000 46%, #0000 0);
+  mask: var(--g) 17% 69% /15% 15%, var(--g) 83% 69% /15% 15%,
+    var(--g) 17% 30.5%/15% 15%, var(--g) 84% 30.5%/15% 15%,
+    var(--g) 50.5% 87% /15% 15%, var(--g) 50% 13% /15% 15%,
+    radial-gradient(#000 46%, #0000 0);
+  clip-path: polygon(
+    45.5% 43%,
+    41% 5%,
+    59% 5%,
+    54.5% 42.5%,
+    86% 19%,
+    91% 36%,
+    60% 50%,
+    89% 63%,
+    82% 78%,
+    54.5% 59%,
+    59% 90%,
+    41% 98%,
+    45.5% 59%,
+    18% 78%,
+    10% 63%,
+    41% 50%,
+    9% 36%,
+    18% 21%
+  );
+}
+#youtube {
+  bottom: 10%;
+  left: 25%;
+}
+.atmosphere {
+  position: absolute;
+  height: min(10vw, 10vh);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+.planets {
+  height: 100%;
+  aspect-ratio: 1;
+  animation: planets infinite var(--orbitTime) linear;
+}
+#js {
+  height: min(8vw, 8vh);
+  border-radius: 10px;
+}
+#python {
+  height: min(8vw, 8vh);
+}
+#java {
+  height: min(14vw, 14vh);
+}
+#content {
+  width: 50%;
+  height: 50vh;
+  position: relative;
+  transition: height 0.3s ease-in-out;
+  border-radius: min(2vw, 2vh);
+  overflow: hidden;
+}
+#text {
+  box-sizing: border-box;
+  font-size: max(min(3vw, 3vh), 16px);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  width: 100%;
+  height: 100%;
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(22, 22, 22);
+  overflow-y: scroll;
+}
+#text::-webkit-scrollbar {
+  width: min(1vw, 1vh);
+}
+#text::-webkit-scrollbar-track {
+  background: rgb(34, 34, 34);
+  transform: translateX(-100%);
+}
+#text::-webkit-scrollbar-thumb {
+  background-color: rgb(119, 119, 119);
+  box-shadow: 0 0 20px 5px white;
+}
+#arrow {
+  position: absolute;
+  height: min(5vh, 5vw);
+  right: 2vw;
+  bottom: 1vh;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.expanded {
+  height: 85vh !important;
+}
+@media (max-width: 900px) {
+  #staticPlanetarium {
+    height: auto;
+    width: 80vw;
+    margin-bottom: 10vh;
+  }
+  #content {
+    width: 85%;
+    height: 40vh;
+  }
+  #text {
+    padding: 3vh 7vw;
+  }
+  #arrow {
+    height: 3vh;
+    bottom: 0.5vh;
+    right: 2vw;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes planets {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0px 20px violet;
+  }
+  50% {
+    box-shadow: 0px 0px 22px violet;
+  }
+}

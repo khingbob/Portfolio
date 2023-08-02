@@ -1,5 +1,5 @@
 import css from "./Welcome.module.css";
-import coolPic from "../assets/serious_1.png";
+import coolPic from "../assets/serious.png";
 export default () => {
   return (
     <div id={css.welcome}>
@@ -8,9 +8,13 @@ export default () => {
       </div>
       <div id={css.welcomeText}>
         <h1>
-          Hello, I'm <span id={css.bobur}>Bobur</span> <br /> Welcome to my
-          story of Front-end Development.
+          Hello, I'm <span id={css.bobur}>Bobur</span> <br />{" "}
         </h1>
+        <h2 id={css.welcomeSpan}>
+          Welcome to my story of
+          <br />
+          Front-end Development.
+        </h2>
       </div>
     </div>
   );

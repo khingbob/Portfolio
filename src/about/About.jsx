@@ -19,13 +19,14 @@ export default () => {
       <div id={css.aboutContent}>
         <h1 id={css.aboutMe}>About Me</h1>
         <div id={css.aboutText}>
-          My name is Bobur and I am a {age}-year-old student from Uzbekistan. I
-          am currently pursuing a degree in informatics at the Technical
-          University of Munich (TUM). I have a passion for programming and web
-          development, which I discovered when I was 15 years old. My goal is to
-          become a full-stack developer, and I am working hard to master the
-          front-end and back-end skills. I enjoy learning new technologies and
-          creating innovative solutions for the web.
+          My name is Bobur Khayitov and I am a {age}-year-old student from
+          Uzbekistan. I am currently pursuing a degree in informatics at the
+          Technical University of Munich (TUM). I have a passion for programming
+          and web development, which I discovered when I was 15 years old. My
+          goal is to become a full-stack developer, and at the moment I am
+          working hard to master my front-end skills, right after to start
+          mastering back-end. I enjoy learning new technologies and creating
+          innovative solutions for the web.
         </div>
       </div>
       <img id={css.smiling} src={smiling} />

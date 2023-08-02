@@ -1,0 +1,107 @@
+#contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 10vh 0 20vh 0;
+}
+#contacts h1 {
+  font-size: min(9vw, 5vh);
+}
+#coolPicDiv {
+  height: 50vh;
+  width: 40vh;
+  border-radius: min(10vw, 10vh);
+  background-size: 100% 50%;
+  overflow: hidden;
+  position: relative;
+}
+#coolPic {
+  height: 100%;
+  position: relative;
+}
+#coolPicBack {
+  position: absolute;
+  background-color: #cfad80;
+  width: 100%;
+  height: 90%;
+  bottom: 0;
+  left: 0;
+  border-radius: min(10vh, 10vw);
+}
+#contactsContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#column {
+  display: flex;
+  flex-direction: column;
+  gap: 9vh;
+}
+#linksDiv {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: min(5vh, 5vw);
+  width: 12vw;
+  height: 12vw;
+  background-color: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease-out;
+}
+.iconWrap:hover {
+  background-color: rgba(255, 255, 255, 0.178);
+}
+.icons {
+  width: 60%;
+}
+#contactData {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  font-size: max(min(3vw, 3vh), 16px);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  padding: 0;
+  width: auto;
+}
+@media (max-width: 900px) {
+  #contacts {
+    padding: 5vh 0 15vh 0;
+  }
+  #contactsContent {
+    flex-direction: column;
+    gap: 10vh;
+  }
+  #coolPicDiv {
+    height: 50vh;
+    width: 40vh;
+  }
+  #coolPic {
+    height: 100%;
+  }
+  #column {
+    width: 100%;
+  }
+  #linksDiv {
+    width: 100%;
+    height: 10vh;
+    justify-content: space-evenly;
+  }
+  .iconWrap {
+    width: 20vw;
+    height: 20vw;
+  }
+  #contactData {
+    align-items: center;
+  }
+}

@@ -1,6 +1,67 @@
 #start {
-  height: 100vh;
   width: 100%;
-  margin-bottom: 100vh;
   background-color: #a4714b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0;
+  gap: 10vw;
+  position: relative;
+}
+#beachContainer {
+  position: relative;
+}
+.beach {
+  border-radius: 10px;
+  width: 30vw;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+#beach {
+  box-shadow: 0px 0px 20px 7px #674831;
+}
+#beachLook {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+#startContent {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+#startHeader {
+  font-size: max(min(6vw, 6vh), 20px);
+}
+#startText {
+  font-size: max(min(3vw, 3vh), 16px);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+#awards {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#awards:hover {
+  color: rgb(255, 255, 143);
+}
+/*vertical*/
+@media (max-aspect-ratio: 1) {
+  #start {
+    flex-direction: column;
+    align-items: center;
+  }
+  #startContent {
+    width: 80vw;
+  }
+  .beach {
+    height: auto;
+    width: 80vw;
+  }
+  .prices {
+    height: auto;
+    width: 80vw;
+  }
 }

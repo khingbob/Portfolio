@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color: rgba(255, 255, 255, 0.87);
   background-color: black;
 
@@ -14,6 +13,9 @@
   --gold: rgb(255, 217, 0);
   --lightGold: #ffee90;
 }
+html {
+  overflow-x: hidden;
+}
 * {
   user-select: none;
   -webkit-user-drag: none; /* For Safari */
@@ -24,13 +26,47 @@
 
 a {
   text-decoration: inherit;
+  color: inherit;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
+  font-size: max(min(6vw, 6vh), 20px);
+}
+.invisible {
+  visibility: hidden;
+}
+#credits {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#passion {
+  text-align: center;
+}
+#lastUpdate {
+  text-align: center;
+  font-size: 0.8em;
+  color: rgb(175, 175, 175);
+}
+.forward {
+  --first: opacity 0.2s ease-in-out;
+  --second: opacity 0.2s 0.03s ease-in-out;
+  --third: opacity 0.2s 0.06s ease-in-out;
+  --fourth: opacity 0.2s 0.09s ease-in-out;
+  --fifth: opacity 0.2s 0.12s ease-in-out;
+}
+.reverse {
+  --first: opacity 0.2s 0.12s ease-in-out;
+  --second: opacity 0.2s 0.09s ease-in-out;
+  --third: opacity 0.2s 0.06s ease-in-out;
+  --fourth: opacity 0.2s 0.03s ease-in-out;
+  --fifth: opacity 0.2s ease-in-out;
 }

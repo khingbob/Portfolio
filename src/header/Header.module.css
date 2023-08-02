@@ -4,11 +4,11 @@
   justify-content: end;
   align-items: center;
   width: 97%;
-  gap: 6vw;
+  gap: 5vw;
   font-size: max(min(3vw, 2vh), 12px);
   top: 3vh;
   transition: color 0.2s ease-in-out;
-  z-index: 10;
+  z-index: 4;
 }
 
 #header > div:hover {
@@ -32,16 +32,16 @@
   align-items: center;
 }
 #logo {
+  position: fixed;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  font-size: max(min(3vw, 2vh), 14px);
+  font-size: max(min(5vw, 3vh), 16px);
   color: black;
-  background-color: rgba(255, 217, 0, 0.7);
+  background-color: rgba(255, 223, 40, 0.7);
   border-radius: max(min(3vw, 1.4vh), 5px);
   box-sizing: border-box;
   box-shadow: none;
@@ -50,49 +50,98 @@
   height: max(min(9vw, 5vh), 20px);
   width: max(min(9vw, 5vh), 20px);
   transition: box-shadow 0.2s ease-out, width 0.2s ease-in-out,
-    height 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    height 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+    font-size 0.2s ease-in-out;
 }
 #logo:hover {
   box-shadow: 0 0 8px var(--gold);
 }
 .expansion {
-  border-radius: 100vh !important;
-  width: 80vw !important;
-  height: 80vw !important;
+  border-radius: 100vw !important;
+  width: 65vh !important;
+  height: 65vh !important;
+  cursor: default !important;
+  font-size: max(min(8vw, 5vh), 16px) !important;
 }
 #b {
-  font-size: max(min(4vw, 3vh), 16px);
+  z-index: 10;
   font-weight: 600;
+  cursor: pointer;
 }
-#hiddenMenu {
-  position: absolute;
-  width: 80vw;
-  height: 80vw;
-}
+
 .hiddenMenu {
-  position: absolute;
+  position: fixed;
+  cursor: pointer;
+  height: min(5vh, 8vw);
+  z-index: 10;
+  transform: translate(50%, -50%);
+  color: black;
+  display: none;
+  opacity: 0;
+}
+.hiddenMenu:hover {
+  color: white;
 }
 #hiddenAbout {
-  left: 8%;
-  top: 46%;
+  right: 30vh;
+  top: 4vh;
+  transition: var(--first);
 }
 #hiddenStart {
-  top: 60%;
-  left: 11%;
+  right: 28vh;
+  top: 13vh;
+  stroke-width: 1.1;
+  transition: var(--second);
+}
+#hiddenSkills {
+  right: 23vh;
+  top: 21vh;
+  transition: var(--third);
 }
 #hiddenProjects {
-  top: 74%;
-  left: 21%;
+  right: 16vh;
+  top: 27vh;
+  height: min(4vh, 6.5vw);
+  stroke-width: 1.3;
+  transition: var(--fourth);
 }
 #hiddenContacts {
-  bottom: 9%;
-  left: 35%;
+  right: 6vh;
+  top: 30vh;
+  height: min(4.5vh, 8vw);
+  transition: var(--fifth);
+  stroke-width: 1.1;
 }
+
 @media (max-width: 900px) {
   #header {
     width: 92%;
   }
   .menu {
     visibility: hidden;
+  }
+  .expansion {
+    width: 100vw !important;
+    height: 100vw !important;
+  }
+  #hiddenAbout {
+    top: 8vw;
+    right: 46vw;
+  }
+  #hiddenStart {
+    top: 20vw;
+    right: 41vw;
+  }
+  #hiddenSkills {
+    top: 32vw;
+    right: 34vw;
+  }
+  #hiddenProjects {
+    top: 42vw;
+    right: 24vw;
+  }
+  #hiddenContacts {
+    right: 10vw;
+    top: 47vw;
   }
 }

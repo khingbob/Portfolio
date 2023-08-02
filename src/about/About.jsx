@@ -1,5 +1,7 @@
 import css from "./About.module.css";
 import smiling from "../assets/smiling.jpg";
+import { useEffect } from "react";
+import { id } from "../main";
 const birthdate = new Date("2003-04-28");
 const now = new Date();
 
@@ -12,8 +14,13 @@ if (
 ) {
   age--;
 }
-
 export default () => {
+  useEffect(() => {
+    id(css.smiling).onload = () => {
+      document.documentElement.style.backgroundImage = "";
+      id("portfolio").style.opacity = 1;
+    };
+  }, []);
   return (
     <div id={css.about}>
       <div id={css.aboutContent}>

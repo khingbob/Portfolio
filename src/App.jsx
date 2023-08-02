@@ -9,10 +9,6 @@ import { useEffect } from "react";
 import { id } from "./main";
 export default () => {
   document.documentElement.className = "forward";
-  useEffect(() => {
-    document.documentElement.style.backgroundImage = "";
-    id("portfolio").style.opacity = 1;
-  }, []);
   return (
     <div id="portfolio">
       <Header />

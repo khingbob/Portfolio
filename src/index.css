@@ -15,9 +15,10 @@
 }
 html {
   overflow-x: hidden;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position-x: center;
 }
 * {
   user-select: none;

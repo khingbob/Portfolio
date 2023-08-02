@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { id } from "./main";
 export default () => {
   document.documentElement.className = "forward";
+
   return (
     <div id="portfolio">
       <Header />

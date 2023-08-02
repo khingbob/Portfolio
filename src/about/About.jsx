@@ -15,12 +15,6 @@ if (
   age--;
 }
 export default () => {
-  useEffect(() => {
-    id(css.smiling).onload = () => {
-      document.documentElement.style.backgroundImage = "";
-      id("portfolio").style.opacity = 1;
-    };
-  }, []);
   return (
     <div id={css.about}>
       <div id={css.aboutContent}>
@@ -36,7 +30,14 @@ export default () => {
           innovative solutions for the web.
         </div>
       </div>
-      <img id={css.smiling} src={smiling} />
+      <img
+        id={css.smiling}
+        src={smiling}
+        onLoad={() => {
+          document.documentElement.style.backgroundImage = "";
+          id("portfolio").style.opacity = 1;
+        }}
+      />
     </div>
   );
 };

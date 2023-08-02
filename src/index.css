@@ -13,13 +13,6 @@
   --gold: rgb(255, 217, 0);
   --lightGold: #ffee90;
 }
-html {
-  overflow-x: hidden;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position-x: center;
-}
 * {
   user-select: none;
   -webkit-user-drag: none; /* For Safari */
@@ -32,10 +25,17 @@ a {
   text-decoration: inherit;
   color: inherit;
 }
-
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
-  overflow-x: hidden;
+  opacity: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: center;
+  transition: opacity 0.3s ease-in-out;
 }
 
 h1 {

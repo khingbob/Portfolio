@@ -34,8 +34,12 @@ export default () => {
         id={css.smiling}
         src={smiling}
         onLoad={() => {
-          document.documentElement.style.backgroundImage = "";
-          id("portfolio").style.opacity = 1;
+          document.body.style.opacity = 0;
+          setTimeout(() => {
+            document.body.style.backgroundImage = "";
+            document.body.style.opacity = 1;
+            id("portfolio").style.opacity = 1;
+          }, 300);
         }}
       />
     </div>
